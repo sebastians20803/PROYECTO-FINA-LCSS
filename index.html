@@ -32,7 +32,7 @@
         <section class="main-portada">
 
                 <div class="main-portada-imagen">
-                    <img src="./imagenportada.png" alt="">
+                    <img src="./imagenes/imagenportada.png" alt="">
 
                 </div>
 
@@ -59,7 +59,7 @@
 
                 <div class="main-beneficios-box">
                     <div class="main-beneficios-box-logo tuerca">  
-                        <img src="tuerca.png" alt="">
+                        <img src="./iconos/tuerca.png" alt="">
                     </div>
                     <div class="main-beneficios-box-text"> 
                         <h2> Precision Inigualable:</h2> 
@@ -69,7 +69,7 @@
 
                 <div class="main-beneficios-box">
                     <div class="main-beneficios-box-logo reloj"> 
-                        <img src="reloj.png" alt=""> </div>
+                        <img src="./iconos/reloj.png" alt=""> </div>
                     <div class="main-beneficios-box-text"> 
                         <h2> Resultados Rapidos: </h2> 
                         <p> Ahorre tiempo con estimaciones en minutos.</p>
@@ -78,7 +78,7 @@
 
                 <div class="main-beneficios-box">
                     <div class="main-beneficios-box-logo shield"> 
-                        <img src="shield.png" alt=""> </div>
+                        <img src="./iconos/shield.png" alt=""> </div>
                     <div class="main-beneficios-box-text">
                         <h2> Transparencia Total:</h2> 
                         <p> Sin costos ocultos, desglose detallado. </p> </div>
@@ -105,13 +105,13 @@
 
         <header>
             <div class="header-icono">
-                <img src="./icono-empresa.png" alt="">
+                <img src="./imagenes/icono-empresa.png" alt="">
             </div>
             <div class="header-opciones">
                 <a href="#section-main">Inicio</a>
                 <a href="#cuestionario-interactivo">Servicio</a>
                 <a href="#resultados">Costos</a>
-                <a href="">Contacto</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </header>
 
@@ -121,12 +121,97 @@
                     <section class="cuestionario">
 
                         <div class="progress">
+                            <p> Paso 1 de 5: Seleccion de Plataforma </p>
+                            <div class="progress-bar">
+                                <div class="paso completado"></div>
+                                <div class="linea "></div>
 
-                            <div class="progress-bar"></div>
-                
+                                <div class="paso activo"></div>
+                                <div class="linea completada-linea"></div>
+
+                                <div class="paso activo"></div>
+                                <div class="linea completada-linea"></div>
+
+                                <div class="paso activo"></div>
+                                <div class="linea completada-linea"></div>
+
+                                <div class="paso activo"></div>
+                            </div>
+                        </div>
+
+                        <div class="cuestionario-seleccion">
+                            <h1>¿Qué plataforma necesitas?</h1>
+
+                            <section class="cuestionario-seleccion-cards">
+
+                                <label class="card-cuestionario">
+                                    <div class="card-icon">
+                                        <img src="./iconos/logotipo-de-apple.png" alt="">
+                                    </div>
+                                    <div class="card-text">
+                                        <h3>IOS</h3>
+                                        <p> Aplicaciones para Iphone y Ipad. </p>
+                                    </div>
+
+                                    <div class="card-input">
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+
+                                </label>
+
+                                 <label class="card-cuestionario">
+                                    <div class="card-icon">
+                                        <img src="./iconos//androide.png" alt="">
+                                    </div>
+                                    <div class="card-text">
+                                        <h3>Android</h3>
+                                        <p> Aplicaciones para dispositivo Android. </p>
+                                    </div>
+                                    <div class="card-input">
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                </label>
+
+
+                                 <label class="card-cuestionario">
+                                    <div class="card-icon">
+                                        <img src="./iconos//sitio-web.png" alt="">
+
+                                    </div>
+                                    <div class="card-text">
+                                        <h3>Web</h3>
+                                        <p> Aplicaciones y sitios web accesibles. </p>
+                                    </div>
+                                    <div class="card-input">
+
+                                        <input type="checkbox" name="" id="">
+                                        
+                                    </div>
+
+          
+                                </label>
+                                
+                                
+
+
+
+
+
+                            </section>
+
+
+
                         </div>
                     
-                    
+                        <div class="cuestionario-botones">
+                            <button class="cuestionario-anterior" disabled>
+                                <p>Anterior</p>
+                            </button>
+
+                            <button class="cuestionario-siguiente">
+                                <p>Siguiente</p>
+                            </button>
+                        </div>
 
 
                     </section>
@@ -228,8 +313,119 @@
 
             </section>
             
+            <section id="contacto">
+                <div class="contacto-top">
+                    <p>Paso 4 de 4: Contacto </p>
+
+                    <div class="contacto-top-bar">
+                        <div class="step completed">✓</div>
+                        <div class="line completed-line"></div>
+
+                        <div class="step completed">✓</div>
+                        <div class="line completed-line"></div>
+
+                        <div class="step completed">✓</div>
+                        <div class="line active-line"></div>
+
+                        <div class="step active"></div>
+                    </div>
+
+
+                    <div class="labels">
+                        <span>4. Contacto</span>
+                    </div>
+
+
+
+                </div>
+
+                <section class="contacto-form">
+
+                        <div class="contacto-form-text">
+                            <p>¡Casi listo! Envíanos tus detalles para recibir una estimación personalizada.</p>
+                        </div>
+
+                        <div class="contacto-form-form">
+                            <form action="" id="form-contact" >
+                                <h4>Formulario de contacto</h4>
+                                <label for="">Nombre Completo<span>*</span></label>
+                                <input type="text" name="nombre" id="" placeholder="Ej: Ana Garcia"  required>
+                                
+
+                                <label for="">Correo electronico<span>*</span></label>
+                                <input type="email" name="correo" id="" placeholder="Ej: ana.garcia@email.com" required>
+                                
+
+                                <label for="">Mensaje (opcional)</label>
+                                <textarea name="mensaje" id="input_mensaje" placeholder="Describe tu proyecto brevemente..."></textarea>
+                                
+
+                                <button type="submit">  Enviar mensaje</button>
+                            </form>  
+
+                        </div>
+
+                        <div class="contacto-form-recursos">
+                            <h3>Recursos Educativos</h3>
+
+                            <section class="recursos-educativos-main">
+
+                                <div class="recursos-educativos-boxes">
+                                    <div class="recursos-educativos-icon">
+                                        <img src="./iconos//book.png" alt="">
+                                    </div>
+                                    <div class="recursos-educativos-text">
+                                        <h6>Guia: Como estimar proyectos de software</h6>
+                                    </div>
+                                </div>
+
+                                <div class="recursos-educativos-boxes">
+                                    <div class="recursos-educativos-icon">
+                                        <img src="./iconos//archivo.png" alt="">
+                                    </div>
+                                    <div class="recursos-educativos-text">
+                                        <h6>Articulo: Factos clave en el costo de desarrollo</h6>
+                                    </div>
+
+                                </div>
+
+                                <div class="recursos-educativos-boxes">
+                                    <div class="recursos-educativos-icon">
+                                        <img src="./iconos//camara-de-video.png" alt="">
+                                    </div>
+                                    <div class="recursos-educativos-text">
+                                        <h6>Webinar: Mejores practicas de estimacion</h6>
+                                    </div>
+                                </div>
+
+                            </section>
+
+
+
+
+                        </div>
+
+                </section>
+
+            </section>
             
         </main>
+
+
+
+        <footer>
+
+            <div>  
+                <h2>2024 CostoDev App. Todos los derechos reservados </h2>
+  
+            </div>
+
+
+
+
+        </footer>
+
+
 
 
     </section>
