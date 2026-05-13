@@ -21,7 +21,10 @@ body{
 }
 
 
+#section-main footer {
+    display: none;
 
+}
 
 #section-main {
     display: flex;
@@ -919,6 +922,10 @@ MAIN SECTION
     margin-bottom: 0rem;
     }
 
+    #section-main footer {
+        display:flex;
+    
+    }
     .main-portada {
     height: 60%;
     width: 100%;
@@ -1181,6 +1188,78 @@ APLICACION CUESTIONARIO
         cursor: pointer;
     }
 
+/*-------------------------------------------------------------------------
+RESULTADOS
+*/
+
+#resultados {
+    height: 90vh;
+    scroll-margin-top: 10vh;
+
+}
+
+.resultados-title h1{
+    margin: 0;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid gray;
+}
+.resultados-costo-total {
+    width: 90%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.resultados-costo-total h2{
+    font-size: 2rem;
+}
+.resultados-costo-total h2:last-child{
+    margin: 0;
+    padding-left: 1rem;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace
+}
+.resultados-costo-total h2:first-child::after{
+    content: ":";
+}
+
+.resultados-desglose-costo {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.desglose-costo-box{
+    height: auto;
+    width: 45%;
+    
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    border-radius: 1rem;
+}
+
+.resultados-desglose-detallado{
+    width: 90%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.resultados-desglose-detallado table {
+    width: 60%;
+    border-collapse: collapse;
+}
 
 }
 
