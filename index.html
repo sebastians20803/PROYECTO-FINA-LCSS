@@ -41,9 +41,9 @@
                     <p> Obtenga una prevision precisa y transparten para impulsar su desarrollo digital. </p>
 
                     <div class="main-portada-button">
-                        <button>
-                            <a href="#app">Comenzar</a>
-                        </button>
+                        
+                        <a href="#app"> <button>Comenzar</button> </a>
+                        
                     </div>
                 </div>
 
@@ -120,14 +120,14 @@
                  <img src="./imagenes/icono-empresa.png" alt="">
             </div>
             <div class="header-opciones">
-                <a href="#section-main">Inicio</a>
+                <a href="#section-mai   n">Inicio</a>
                 <a href="#app">Servicio</a>
                 <a href="#resultados">Costos</a>
                 <a href="#contacto">Contacto</a>
             </div>
         </header>
 
-        <main>
+        <main>  
             <section id="cuestionario-interactivo">
 
                     <section class="cuestionario">
@@ -220,9 +220,11 @@
                                 <p>Anterior</p>
                             </button>
 
-                            <button class="cuestionario-siguiente">
-                                <p>Siguiente</p>
-                            </button>
+                            <a href="#resultados">
+                                <button class="cuestionario-siguiente">
+                                    <p>Siguiente</p>
+                                </button>
+                            </a>
                         </div>
 
 
@@ -243,28 +245,36 @@
                         <div class="desglose-costo-box">
                             <h3>Design - $20,000 (16%)</h3>
                             <div class="desglose-costo-bar">
-                                <div class="desglose-costo-progressbar progressbar1"></div>
+                                <div class="desglose-costo-progressbar progressbar1">
+                                    <h1>16%</h1>
+                                </div>
                             </div>
                         </div>
 
                         <div class="desglose-costo-box">
                             <h3>Frontend Dev - $45,000 (36%)</h3>
                             <div class="desglose-costo-bar">
-                                <div class="desglose-costo-progressbar progressbar2"></div>
+                                <div class="desglose-costo-progressbar progressbar2">
+                                    <h1>36%</h1>
+                                </div>
                             </div>
                         </div>
 
                         <div class="desglose-costo-box">
                             <h3>Backend Dev: - $40,000 (32%)</h3>
                             <div class="desglose-costo-bar">
-                                <div class="desglose-costo-progressbar progressbar3">  </div>
+                                <div class="desglose-costo-progressbar progressbar3">
+                                    <h1>32%</h1>
+                                </div>
                             </div>
                         </div>
 
                         <div class="desglose-costo-box">
                             <h3>Testing & QA: - $20,000 (16%)</h3>
                             <div class="desglose-costo-bar">
-                                <div class="desglose-costo-progressbar progressbar4"></div>
+                                <div class="desglose-costo-progressbar progressbar4">
+                                    <h1>16%</h1>
+                                </div>
                             </div>
                         </div>
  
@@ -327,7 +337,7 @@
             
             <section id="contacto">
                 <div class="contacto-top">
-                    <p>Paso 4 de 4: Contacto </p>
+                    <p>Paso 4: Resumen y Contacto </p>
 
                     <div class="contacto-top-bar">
                         <div class="step completed">✓</div>
@@ -357,65 +367,52 @@
                             <p>¡Casi listo! Envíanos tus detalles para recibir una estimación personalizada.</p>
                         </div>
 
-                        <div class="contacto-form-form">
-                            <form action="" id="form-contact" >
-                                <h4>Formulario de contacto</h4>
-                                <label for="">Nombre Completo<span>*</span></label>
-                                <input type="text" name="nombre" id="" placeholder="Ej: Ana Garcia"  required>
-                                
-
-                                <label for="">Correo electronico<span>*</span></label>
-                                <input type="email" name="correo" id="" placeholder="Ej: ana.garcia@email.com" required>
-                                
-
-                                <label for="">Mensaje (opcional)</label>
-                                <textarea name="mensaje" id="input_mensaje" placeholder="Describe tu proyecto brevemente..."></textarea>
-                                
-
-                                <button type="submit">  Enviar mensaje</button>
-                            </form>  
-
-                        </div>
-
-                        <div class="contacto-form-recursos">
-                            <h3>Recursos Educativos</h3>
-
-                            <section class="recursos-educativos-main">
-
-                                <div class="recursos-educativos-boxes">
-                                    <div class="recursos-educativos-icon">
-                                        <img src="./iconos//book.png" alt="">
+                        <section class="contacto-formyrecursos">
+                            <div class="contacto-form-form">
+                                <form action="" id="form-contact" >
+                                    <h4>Formulario de contacto</h4>
+                                    <label for="">Nombre Completo<span>*</span></label>
+                                    <input type="text" name="nombre" id="" placeholder="Ej: Ana Garcia"  required>
+                            
+                                    <label for="">Correo electronico<span>*</span></label>
+                                    <input type="email" name="correo" id="" placeholder="Ej: ana.garcia@email.com" required>
+                            
+                                    <label for="">Mensaje (opcional)</label>
+                                    <textarea name="mensaje" id="input_mensaje" placeholder="Describe tu proyecto brevemente..."></textarea>
+                            
+                                    <button type="submit">  Enviar mensaje</button>
+                                </form>
+                            </div>
+                            <div class="contacto-form-recursos">
+                                <h3>Recursos Educativos</h3>
+                                <section class="recursos-educativos-main">
+                                    <div class="recursos-educativos-boxes">
+                                        <div class="recursos-educativos-icon">
+                                            <img src="./iconos//book.png" alt="">
+                                        </div>
+                                        <div class="recursos-educativos-text">
+                                            <h6>Guia: Como estimar proyectos de software</h6>
+                                        </div>
                                     </div>
-                                    <div class="recursos-educativos-text">
-                                        <h6>Guia: Como estimar proyectos de software</h6>
+                                    <div class="recursos-educativos-boxes">
+                                        <div class="recursos-educativos-icon">
+                                            <img src="./iconos//archivo.png" alt="">
+                                        </div>
+                                        <div class="recursos-educativos-text">
+                                            <h6>Articulo: Factos clave en el costo de desarrollo</h6>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="recursos-educativos-boxes">
-                                    <div class="recursos-educativos-icon">
-                                        <img src="./iconos//archivo.png" alt="">
+                                    <div class="recursos-educativos-boxes">
+                                        <div class="recursos-educativos-icon">
+                                            <img src="./iconos//camara-de-video.png" alt="">
+                                        </div>
+                                        <div class="recursos-educativos-text">
+                                            <h6>Webinar: Mejores practicas de estimacion</h6>
+                                        </div>
                                     </div>
-                                    <div class="recursos-educativos-text">
-                                        <h6>Articulo: Factos clave en el costo de desarrollo</h6>
-                                    </div>
-
-                                </div>
-
-                                <div class="recursos-educativos-boxes">
-                                    <div class="recursos-educativos-icon">
-                                        <img src="./iconos//camara-de-video.png" alt="">
-                                    </div>
-                                    <div class="recursos-educativos-text">
-                                        <h6>Webinar: Mejores practicas de estimacion</h6>
-                                    </div>
-                                </div>
-
-                            </section>
-
-
-
-
-                        </div>
+                                </section>
+                            </div>
+                        </section>
 
                 </section>
 

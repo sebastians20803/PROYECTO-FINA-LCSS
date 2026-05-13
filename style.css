@@ -89,18 +89,22 @@ body{
     margin-bottom: 1rem;
 }
 
-.main-portada-button button{
-    height: 50%;
+.main-portada-button a{
+    height: 60%;
     width: 70%;
+    cursor: pointer;
+}
+.main-portada-button a button{
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
     font-size: 1rem;
     color: var(--color-secundary);
     font-weight: bold;
     letter-spacing: 0.2rem;
     text-decoration: none;
-}
-.main-portada-button button a{
-    text-decoration: none;
+    cursor: pointer;
+  
 }
 .main-beneficios {
     width: 100%;
@@ -400,9 +404,7 @@ header{
 
 
 .card-input input[type="checkbox"]{
-    appearance: none;
-    outline: none;
-    box-shadow: none;
+    
     width: 22px;
     height: 22px;
     border: 2px solid #666;
@@ -411,35 +413,13 @@ header{
     cursor: pointer;
     position: relative;
 }
-.card-input input[type="checkbox"]:focus-visible{
-    outline: none;
-}
-.card-input input[type="checkbox"]:focus{
-    outline: none;
-    box-shadow: none;
-}
+
 
 .card-input input[type="checkbox"]:checked{
-    border-color:var(--color_primary);
+    accent-color:var(--color_primary);
     
 }
-.card-input input[type="checkbox"]:checked::after{
-    content: "";
 
-    width: 10px;
-    height: 10px;
-
-    background: var(--color_primary);
-    border-radius: 50%;
-
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-    
-
-    transform: translate(-50%, -50%);
-}
 .card-cuestionario:has(input:checked){
     border: 2px solid var(--color_primary);
     background: rgba(162, 44, 41, 0.08);
@@ -465,8 +445,12 @@ header{
     height: 90%;
     background-color: gray;
 }
-.cuestionario-siguiente{
+.cuestionario-botones a{
     width: 55%;
+    height: 100%;
+}
+.cuestionario-siguiente{
+    width: 100%;
     height: 90%;
     border-radius: 1rem;
     background-color: var(--color_primary);
@@ -547,58 +531,93 @@ header{
 }
 /* COLORES DE CADA CAJA - DESGLOSE COSTO */
 .desglose-costo-box:nth-child(1){
-    background: linear-gradient(90deg, #2D7FF9 ,#2ECC71 );
+    background: linear-gradient(135deg, #A22C29 0%, #7a2020 50%, #253D5B 100%)   ;
 }
 
 .desglose-costo-box:nth-child(2){
-    background: linear-gradient(90deg, #8A2BE2 ,#FF8A00  );
+    background: linear-gradient(135deg, #253D5B 0%, #1a2d45 50%, #67697c 100%);
 }
 
 .desglose-costo-box:nth-child(3){
-    background: linear-gradient(90deg, #9C27B0  ,#FF6A00  );
+    background: linear-gradient(135deg, #67697c 0%, #4e505f 50%, #A22C29 100%);
 }
 
 .desglose-costo-box:nth-child(4){
-    background: linear-gradient(90deg, #2196F3  ,#FF4D6D  );
+    background: linear-gradient(135deg, #3d3c34 0%, #253D5B 50%, #A22C29 100%);
 }
 
 
 .desglose-costo-bar {
     width: 100%;
     height: 2rem;
-    background: #F3F3F3;
+    background: rgba(255, 255, 255, 0.22);
     border-radius: 1rem;
     overflow: hidden;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+.desglose-costo-progressbar{
+    animation: shimmer 3s linear infinite;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     
+    
+}
+.desglose-costo-progressbar h1{
+    margin: 0;
+    
+    margin-left: 1rem;
+    padding: 2px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 .progressbar1{
     height: 100%;
     width: 16%;
-    background: var(--color-secundary);
+    background: linear-gradient(90deg,
+    rgba(214, 213, 201, 0.9) 0%,
+    rgba(103, 105, 124, 0.7) 50%,
+    rgba(214, 213, 201, 0.9) 100% );
+    
 }
+
+
 
 .progressbar2{
     height: 100%;
     width: 36%;
-    background: var(--color-secundary);
+    background: linear-gradient( 90deg,
+    #A22C29 0%,
+    #d63e3a 50%,
+    #A22C29 100%);
     
 }
 .progressbar3{
     height: 100%;
     width: 32%;
-    background: var(--color-secundary);
+    background: linear-gradient(90deg,
+    #d6d5c9 0%,
+    #bfbeaf 50%,
+    #d6d5c9 100% );
     
 }
 .progressbar4{
     height: 100%;
     width: 16%;
-    background: var(--color-secundary);
+    background: linear-gradient(90deg,
+    #67697c 0%,
+    #9a9cb4 50%,
+    #67697c 100%);
     
 }
-
 
 .resultados-desglose-detallado{
     width: 90%;
@@ -644,6 +663,11 @@ tfoot tr td {
     color: white;
     border-radius: 1rem;
 }
+
+/*-------------------------------------------------------------------------
+RESULTADOS
+*/
+
 
 #contacto {
     height: auto;
@@ -721,6 +745,14 @@ tfoot tr td {
     flex-direction: column;
     align-items: center;
     
+}
+.contacto-formyrecursos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .contacto-form-text{
     width: 90%;
@@ -1030,7 +1062,7 @@ MAIN SECTION
     text-align: center;
     }   
 
-    footer{
+    .main-portada footer{
         height: 15vh;
     }
 
@@ -1115,6 +1147,7 @@ APLICACION CUESTIONARIO
     .cuestionario-seleccion h1{
         text-align: center;
         font-size: 3rem;
+        margin-bottom: 0.6rem;
     }
     .cuestionario-seleccion-cards{
         width: 100%;
@@ -1229,23 +1262,22 @@ RESULTADOS
 }
 
 .resultados-desglose-costo {
-    width: 90%;
+    width: 75%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 .desglose-costo-box{
     height: auto;
-    width: 45%;
-    
+    width: 49%;
     padding: 0.5rem;
     padding-left: 1.5rem;
     border-radius: 1rem;
 }
 
 .resultados-desglose-detallado{
-    width: 90%;
+    width: 75%;
     height: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -1257,8 +1289,106 @@ RESULTADOS
 }
 
 .resultados-desglose-detallado table {
-    width: 60%;
+    width: 100%;
     border-collapse: collapse;
+}
+.resultados-descargar{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+.resultados-descargar button{
+    width: 100%;
+    background-color: var(--color_primary);
+}
+
+.resultados-desglose-detallado td {
+    font-weight: 500;
+    
+}
+.resultados-desglose-detallado th {
+    font-weight: 700;
+    background-color: #f2f2f2;
+    letter-spacing: 0.5px;
+}   
+
+
+/*-------------------------------------------------------------------------
+CONTACTO
+*/
+#contacto {
+    height: 85vh;
+    scroll-margin-top: 10vh;
+}
+
+
+.contacto-top{
+    width: 50%;
+}
+.contacto-top p{
+    font-size: 2rem;
+    font-weight: bold;
+    color:black;
+}
+.contacto-form-text{
+    width: 90%;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.contacto-formyrecursos{
+    width: 100%;
+    height: 50vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.contacto-form-form{
+    height: 80%;
+    width: 80%;
+    background-color: gray;
+    margin-left: 15%;
+    margin-right: 4rem;
+    margin-top: ;
+}
+
+.recursos-educativos-main {
+    gap: 1rem;
+}
+.contacto-form-recursos {
+    height: 100%;
+    width: 40%;
+    text-align: left;
+    margin-right: 10rem;
+    margin-top: 6rem;
+
+}
+.contacto-form-recursos h3{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+
+.recursos-educativos-boxes {
+    width: 100%;
+    height: 6vh;
+    border: 1px solid gray;
+    display: flex;
+    border-radius: 1rem;
+    gap: 20px;
+   }
+
+.recursos-educativos-text{
+    width: 82%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 3px;
+    font-size: 1.2rem;
+    
 }
 
 }
