@@ -20,7 +20,9 @@
 
 <body>
     
-    
+    <div class="loader">
+    <div class="loader-spinner"></div>
+</div>
 
    
  <!-- ===================================================================
@@ -58,7 +60,7 @@
 
             <div class="main-beneficios-boxes">
 
-                <div class="main-beneficios-box">
+                <div class="main-beneficios-box beneficios-box-1">
                     <div class="main-beneficios-box-logo tuerca">  
                         <img src="./iconos/tuerca.png" alt="">
                     </div>
@@ -68,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="main-beneficios-box">
+                <div class="main-beneficios-box beneficios-box-2">
                     <div class="main-beneficios-box-logo reloj"> 
                         <img src="./iconos/reloj.png" alt=""> </div>
                     <div class="main-beneficios-box-text"> 
@@ -77,7 +79,7 @@
                     </div>
                 </div>
 
-                <div class="main-beneficios-box">
+                <div class="main-beneficios-box beneficios-box-3">
                     <div class="main-beneficios-box-logo shield"> 
                         <img src="./iconos/shield.png" alt=""> </div>
                     <div class="main-beneficios-box-text">
@@ -117,10 +119,10 @@
         <header>
             <div class="header-icono">
                 
-                 <img src="./imagenes/icono-empresa.png" alt="">
+                 <img src="./imagenes/imagen-empresa2.png" alt="">
             </div>
             <div class="header-opciones">
-                <a href="#section-mai   n">Inicio</a>
+                <a href="#section-main">Inicio</a>
                 <a href="#app">Servicio</a>
                 <a href="#resultados">Costos</a>
                 <a href="#contacto">Contacto</a>
@@ -216,7 +218,7 @@
                         </div>
                     
                         <div class="cuestionario-botones">
-                            <button class="cuestionario-anterior" disabled>
+                            <button class="cuestionario-anterior" >
                                 <p>Anterior</p>
                             </button>
 
@@ -327,11 +329,13 @@
 
                         </table>
 
+                        <div class="resultados-descargar">
+                        <button type="button"><span>&gt;</span> Download Report (PDF) </button>
+                        </div>
+
                     </div>
 
-                    <div class="resultados-descargar">
-                        <button type="button"><span>&gt;</span> Download Report (PDF) </button>
-                    </div>
+                    
 
             </section>
             
@@ -380,36 +384,42 @@
                                     <label for="">Mensaje (opcional)</label>
                                     <textarea name="mensaje" id="input_mensaje" placeholder="Describe tu proyecto brevemente..."></textarea>
                             
-                                    <button type="submit">  Enviar mensaje</button>
+                                    <button type="submit" id="enviar-mensaje">  Enviar mensaje</button>
                                 </form>
                             </div>
                             <div class="contacto-form-recursos">
                                 <h3>Recursos Educativos</h3>
                                 <section class="recursos-educativos-main">
-                                    <div class="recursos-educativos-boxes">
-                                        <div class="recursos-educativos-icon">
-                                            <img src="./iconos//book.png" alt="">
+                                    <a href="#contacto" class="ancla-educativo-boxes">
+                                        <div class="recursos-educativos-boxes">
+                                            <div class="recursos-educativos-icon">
+                                                <img src="./iconos//book.png" alt="">
+                                            </div>
+                                            <div class="recursos-educativos-text">
+                                                <h6>Guia: Como estimar proyectos de software</h6>
+                                            </div>
                                         </div>
-                                        <div class="recursos-educativos-text">
-                                            <h6>Guia: Como estimar proyectos de software</h6>
+                                    </a>
+                                    <a href="https://www.youtube.com/watch?v=FzG4uDgje3M" target="_blank" class="ancla-educativo-boxes">
+                                        <div class="recursos-educativos-boxes">
+                                            <div class="recursos-educativos-icon">
+                                                <img src="./iconos//archivo.png" alt="">
+                                            </div>
+                                            <div class="recursos-educativos-text">
+                                                <h6>Articulo: Factos clave en el costo de desarrollo</h6>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="recursos-educativos-boxes">
-                                        <div class="recursos-educativos-icon">
-                                            <img src="./iconos//archivo.png" alt="">
+                                    </a>
+                                    <a href="https://static5.depositphotos.com/1035861/438/i/450/depositphotos_4380254-stock-photo-final-exam-marked-with-100.jpg" target="_blank" class="ancla-educativo-boxes">
+                                        <div class="recursos-educativos-boxes">
+                                            <div class="recursos-educativos-icon">
+                                                <img src="./iconos//camara-de-video.png" alt="">
+                                            </div>
+                                            <div class="recursos-educativos-text">
+                                                <h6>Webinar: Mejores practicas de estimacion</h6>
+                                            </div>
                                         </div>
-                                        <div class="recursos-educativos-text">
-                                            <h6>Articulo: Factos clave en el costo de desarrollo</h6>
-                                        </div>
-                                    </div>
-                                    <div class="recursos-educativos-boxes">
-                                        <div class="recursos-educativos-icon">
-                                            <img src="./iconos//camara-de-video.png" alt="">
-                                        </div>
-                                        <div class="recursos-educativos-text">
-                                            <h6>Webinar: Mejores practicas de estimacion</h6>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </section>
                             </div>
                         </section>

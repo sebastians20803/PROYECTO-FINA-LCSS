@@ -37,8 +37,25 @@ body{
     height: auto;
     width: 100%;
     background: linear-gradient(90deg, var(--color-secundary) 0%, #3b506f 35%,var(--color-quaternary) 65%, var(--color_primary) 100% );
-    
+    animation: moverGradiente 4s ease-in-out infinite;
+    background-size: 200% 200%;
 }
+
+@keyframes moverGradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 
 .main-portada-text {
     display: flex;
@@ -104,8 +121,14 @@ body{
     letter-spacing: 0.2rem;
     text-decoration: none;
     cursor: pointer;
-  
+    transition: transform 0.2s, box-shadow 0.2s
 }
+
+.main-portada-button a button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
 .main-beneficios {
     width: 100%;
     height: auto;
@@ -140,6 +163,36 @@ body{
     height: 10vh;
     width: 90%;
 }
+.beneficios-box-1{
+    opacity: 0;
+    animation: aparecer 3s ease forwards;
+    animation-delay: 0.2s;
+
+}
+.beneficios-box-2{
+    opacity: 0;
+    animation: aparecer 5s ease forwards;
+    animation-delay: 0.4s;
+
+
+}
+.beneficios-box-3{
+    opacity: 0;
+    animation: aparecer 7s ease forwards;
+    animation-delay: 0.6s;
+
+}
+
+            @keyframes aparecer {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+
 
 .main-beneficios-box-logo {
     height: 100%;
@@ -197,7 +250,7 @@ header{
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .header-icono {
@@ -255,7 +308,8 @@ header{
     margin-bottom: 2rem;
     height: auto;
     width: 90%;
-    background:var(--color-tertiary)
+    background: rgb(206, 210, 228)
+    
 
 
 }
@@ -354,7 +408,7 @@ header{
 .card-cuestionario{
 
     border-radius: 1rem;
-    border: 1px solid  black;
+    border: 2px solid  black;
     width: 90%;
     height: auto;
     display: flex;
@@ -444,6 +498,8 @@ header{
     border-radius: 1rem;
     height: 90%;
     background-color: gray;
+    cursor: not-allowed;
+
 }
 .cuestionario-botones a{
     width: 55%;
@@ -454,8 +510,14 @@ header{
     height: 90%;
     border-radius: 1rem;
     background-color: var(--color_primary);
+    transition: translate 2s, box-shadow 2s ;
+    cursor: pointer;
+    
 }
-
+.cuestionario-siguiente:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px black;
+}
 .cuestionario-anterior p, .cuestionario-siguiente p{
     font-size: 1rem;
     margin: 0;
@@ -463,9 +525,7 @@ header{
     letter-spacing: 0.1rem;
     color:white;
 }
-.cuestionario-anterior p {
-    color: black;
-}
+
 
 
 
@@ -556,14 +616,20 @@ header{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 .desglose-costo-progressbar{
-    animation: shimmer 3s linear infinite;
+    
     display: flex;
     justify-content: start;
-    align-items: center;
-    
-    
+    align-items: center; 
 }
+
+
+
+
+
+
+
 .desglose-costo-progressbar h1{
     margin: 0;
     
@@ -574,10 +640,6 @@ header{
     font-size: 1rem;
 }
 
-@keyframes shimmer {
-    0%   { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-}
 
 .progressbar1{
     height: 100%;
@@ -586,9 +648,18 @@ header{
     rgba(214, 213, 201, 0.9) 0%,
     rgba(103, 105, 124, 0.7) 50%,
     rgba(214, 213, 201, 0.9) 100% );
-    
+    animation: progressGrow1 2s linear forwards;
 }
 
+@keyframes progressGrow1 {
+
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 16%;
+    }
+}
 
 
 .progressbar2{
@@ -598,8 +669,20 @@ header{
     #A22C29 0%,
     #d63e3a 50%,
     #A22C29 100%);
-    
+    animation: progressGrow2 2s linear forwards;
 }
+
+
+@keyframes progressGrow2 {
+
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 36%;
+    }
+}
+
 .progressbar3{
     height: 100%;
     width: 32%;
@@ -607,8 +690,19 @@ header{
     #d6d5c9 0%,
     #bfbeaf 50%,
     #d6d5c9 100% );
-    
+    animation: progressGrow3 2s ease forwards;
 }
+
+@keyframes progressGrow3 {
+
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 32%;
+    }
+}
+
 .progressbar4{
     height: 100%;
     width: 16%;
@@ -616,7 +710,17 @@ header{
     #67697c 0%,
     #9a9cb4 50%,
     #67697c 100%);
-    
+    animation: progressGrow4 2s linear forwards;
+}
+
+@keyframes progressGrow4 {
+
+    0%{
+        width: 0%;
+    }
+    100% {
+        width: 16%;
+    }
 }
 
 .resultados-desglose-detallado{
@@ -884,8 +988,50 @@ footer h2{
     margin: 0;
 }
 
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e2a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+   
+    animation: loaderFade 0.5s ease-out 0.3s forwards;
+}
+
+@keyframes loaderFade {
+    0%   { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+}
 
 
+.loader-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+
+.ancla-educativo-boxes{
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+.ancla-educativo-boxes:visited {
+    color: inherit;
+}
 
 
 
@@ -928,8 +1074,6 @@ TABLET
     }
 
 }
-
-
 
 
 
@@ -997,13 +1141,18 @@ MAIN SECTION
         justify-content: start;
         align-items: start;
         margin-bottom: 1rem;
+        
     }
+    
     .main-portada-button button{
         height: 50%;
         width: 50%;
         margin-left: 2rem;
+        
     }
-
+    .main-portada-button a button{
+        font-size: 1.5rem;
+    }
     .main-portada-imagen{
         order: 2;
         height: 60%;
@@ -1087,7 +1236,7 @@ APLICACION HEADER
 
     .header-icono img {
     height: 100%;
-    width: 80%;
+    max-width: 80%;
     
     }
     .header-opciones {
@@ -1118,6 +1267,7 @@ APLICACION CUESTIONARIO
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     }
 
     .cuestionario-seleccion-cards{
@@ -1148,6 +1298,7 @@ APLICACION CUESTIONARIO
         text-align: center;
         font-size: 3rem;
         margin-bottom: 0.6rem;
+        color: var(--color_primary);
     }
     .cuestionario-seleccion-cards{
         width: 100%;
@@ -1162,15 +1313,25 @@ APLICACION CUESTIONARIO
     .card-cuestionario{
 
         border-radius: 1rem;
-        border: 1px solid  black;
+        border: 2px solid #94a3b8;
         width: 60%;
         height: 80%;
         display: flex;
         flex-direction: column;
         gap: 0px;
         padding: 0.6rem;
-    }
+        transition: all 0.2s ease;
+        box-shadow:
+        0 2px 6px rgba(0,0,0,0.08),
+        inset 0 1px 2px rgba(255,255,255,0.8);  
+        border-radius: 8px;
+        background-color: #CACEE2
 
+    }
+    
+    .card-cuestionario:hover{
+        transform: translateY(-1rem) ;
+    }
     .card-icon{
         height: 100%;
         width: 100%;
@@ -1215,11 +1376,10 @@ APLICACION CUESTIONARIO
     padding: 0rem 4rem;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 4rem;
     }
     
-    .cuestionario-botones button:hover{
-        cursor: pointer;
-    }
+    
 
 /*-------------------------------------------------------------------------
 RESULTADOS
@@ -1228,14 +1388,14 @@ RESULTADOS
 #resultados {
     height: 90vh;
     scroll-margin-top: 10vh;
-
+    justify-content: space-around;
 }
 
 .resultados-title h1{
     margin: 0;
     margin-top: 2rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     padding-bottom: 2rem;
     border-bottom: 2px solid gray;
 }
@@ -1262,8 +1422,9 @@ RESULTADOS
 }
 
 .resultados-desglose-costo {
-    width: 75%;
+    max-width: 60%;
     display: flex;
+    margin-top: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1272,15 +1433,26 @@ RESULTADOS
     height: auto;
     width: 49%;
     padding: 0.5rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
     border-radius: 1rem;
 }
-
+.resultados-desglose-costo h3 {
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+}
+.desglose-costo-bar {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+.resultados-desglose-detallado h2 {
+    width: 100%;
+    text-align: left;
+}
 .resultados-desglose-detallado{
-    width: 75%;
-    height: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    width: 60%;
+    height: 90%;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
@@ -1290,6 +1462,7 @@ RESULTADOS
 
 .resultados-desglose-detallado table {
     width: 100%;
+    height: 50%;
     border-collapse: collapse;
 }
 .resultados-descargar{
@@ -1346,40 +1519,63 @@ CONTACTO
     justify-content: center;
 }
 .contacto-form-form{
-    height: 80%;
+    height: auto;
     width: 80%;
-    background-color: gray;
+    background-color: white;
     margin-left: 15%;
-    margin-right: 4rem;
-    margin-top: ;
+    margin-right: 0rem;
 }
-
+#enviar-mensaje{
+    margin-bottom: 1rem;
+}
+#form-contact{
+    height: 80%;
+    width: 90%;
+    height: auto;
+    background-color: gray;
+    justify-content: space-around;
+}
 .recursos-educativos-main {
     gap: 1rem;
 }
 .contacto-form-recursos {
-    height: 100%;
+    height: 88%;
     width: 40%;
     text-align: left;
-    margin-right: 10rem;
-    margin-top: 6rem;
+    margin-right: 0rem;
+    margin-top: 0rem;
 
 }
 .contacto-form-recursos h3{
     margin: 0;
     margin-bottom: 1rem;
+    font-size: 1.8rem;
 }
 
 
 .recursos-educativos-boxes {
-    width: 100%;
-    height: 6vh;
-    border: 1px solid gray;
+    width: 70%;
+    height: 8vh;
+    border: 2px solid #94a3b8;
     display: flex;
-    border-radius: 1rem;
-    gap: 20px;
-   }
+    border-radius: 8px;
+    gap: 0px;
+    justify-content: start;
+    box-shadow:
+        0 2px 6px rgba(0,0,0,0.08),
+        inset 0 1px 2px rgba(255,255,255,0.8);
+    transition: all 0.2s ease;
+    background-color: #f5f5f5;
 
+   }
+.recursos-educativos-boxes:hover{
+    border-color: #3b82f6;
+    transform: translateY(-4px);
+    transform: scale(1.2);
+    box-shadow:
+        0 4px 10px rgba(59,130,246,0.2);
+
+}
 .recursos-educativos-text{
     width: 82%;
     height: 100%;
@@ -1387,9 +1583,21 @@ CONTACTO
     justify-content: start;
     align-items: center;
     margin-left: 3px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     
 }
+.recursos-educativos-icon img {
+    width: 60%;
+    height: 60%;
+}
 
+.ancla-educativo-boxes{
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+.ancla-educativo-boxes:visited {
+    color: inherit;
+}
 }
 
