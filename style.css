@@ -61,6 +61,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: slideLeft 2s ease;
 }
 
 .main-portada-text h1{
@@ -89,6 +90,7 @@ body{
     justify-content: center;
     height: 40%;
     width: 100%;
+    animation: slideRight 2s ease;
 
 }
 .main-portada-imagen img{
@@ -96,6 +98,29 @@ body{
     width: 40%;
 
 }
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform: translateX(-180px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform: translateX(180px);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
 
 .main-portada-button {
     height: 10vh;
@@ -779,14 +804,29 @@ tfoot tr td {
     margin-top: 1rem;
 }
 
+.resultados-descargar a{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    
+}
 .resultados-descargar button {
     height: 70%;
     width: 100%;
     font-size: 1rem;
     letter-spacing: 0.1rem;
     background: var(--color_primary);
+    transition: transform 0.2s, box-shadow 0.2s  ease;
     color: white;
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+.resultados-descargar button:hover{
+    transform: translateY(0px) ;
+    box-shadow: 0 10px 20px black;
+    cursor: pointer;
+    
 }
 
 /*-------------------------------------------------------------------------
@@ -1527,6 +1567,12 @@ RESULTADOS
 }   
 
 
+.resultados-descargar button:hover{
+    transform: translateY(10px) ;
+    box-shadow: 0 10px 20px black;
+    cursor: pointer;
+    
+}
 /*-------------------------------------------------------------------------
 CONTACTO
 */
