@@ -93,7 +93,7 @@ body{
 }
 .main-portada-imagen img{
     height: 100%;
-    width: 50%;
+    width: 40%;
 
 }
 
@@ -242,7 +242,7 @@ APP
 
 }
 header{
-    height: auto;
+    height: 20vh;
     width: 100%;
     background: var(--color-quaternary);
     display: flex;
@@ -254,15 +254,15 @@ header{
 }
 
 .header-icono {
-    height: 65%;
-    width: 100%;
+    height: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
 }
 
 .header-icono img {
     height: auto;
-    width: 50%;
+    width: 60%;
     
 }
 
@@ -279,7 +279,7 @@ header{
 }
 
 .header-opciones a{
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -299,7 +299,7 @@ header{
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid black;
-    scroll-margin-top: 12rem;
+    scroll-margin-top: 20vh;
 }
 
 
@@ -377,12 +377,26 @@ header{
 
 .linea {
   flex: 1;
-  height: 2px;
+  height: 4px;
   background-color: black;
+ animation: avanzarLinea 1s infinite ;
 }
+
+@keyframes avanzarLinea {
+
+
+    0%   { background-color: red; }
+    25%  { background-color: black; }
+    50%  { background-color: black; }
+    75%  { background-color: black; }
+    100% { background-color: black; }
+}
+
+
 .completada-linea{
     flex: 1;
     background-color: gray;
+    animation: none;
 }
 
 
@@ -510,7 +524,7 @@ header{
     height: 90%;
     border-radius: 1rem;
     background-color: var(--color_primary);
-    transition: translate 2s, box-shadow 2s ;
+    transition: transform 0.2s, box-shadow 0.2s  ease;
     cursor: pointer;
     
 }
@@ -537,7 +551,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    scroll-margin-top: 12rem;
+    scroll-margin-top: 20vh;
     border-bottom: 1px solid black;
 
 }
@@ -649,6 +663,7 @@ header{
     rgba(103, 105, 124, 0.7) 50%,
     rgba(214, 213, 201, 0.9) 100% );
     animation: progressGrow1 2s linear forwards;
+    animation-delay: 0.8s;
 }
 
 @keyframes progressGrow1 {
@@ -670,6 +685,7 @@ header{
     #d63e3a 50%,
     #A22C29 100%);
     animation: progressGrow2 2s linear forwards;
+    animation-delay: 0.8s;
 }
 
 
@@ -691,6 +707,7 @@ header{
     #bfbeaf 50%,
     #d6d5c9 100% );
     animation: progressGrow3 2s ease forwards;
+    animation-delay: 0.8s;
 }
 
 @keyframes progressGrow3 {
@@ -711,6 +728,7 @@ header{
     #9a9cb4 50%,
     #67697c 100%);
     animation: progressGrow4 2s linear forwards;
+    animation-delay: 0.8s;
 }
 
 @keyframes progressGrow4 {
@@ -733,6 +751,9 @@ header{
 }
 .resultados-desglose-detallado h2{
     text-align: center;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .resultados-desglose-detallado table {
     width: 100%;
@@ -742,7 +763,7 @@ header{
     border: 1px solid gray;
 }
 .resultados-desglose-detallado th,td {
-    padding: 10px;
+    padding: 7px;
 }
 .resultados-desglose-detallado th {
     text-align: left;
@@ -753,7 +774,7 @@ tfoot tr td {
 }
 
 .resultados-descargar{
-    width: 90%;
+    width: 100%;
     height: 4rem;
     margin-top: 1rem;
 }
@@ -761,15 +782,15 @@ tfoot tr td {
 .resultados-descargar button {
     height: 70%;
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
-    background: var(--color-secundary);
+    background: var(--color_primary);
     color: white;
     border-radius: 1rem;
 }
 
 /*-------------------------------------------------------------------------
-RESULTADOS
+CONTACTO
 */
 
 
@@ -779,7 +800,7 @@ RESULTADOS
     display: flex;
     flex-direction: column;
     align-items: center;
-    scroll-margin-top: 12rem;
+    scroll-margin-top: 20vh;
     margin-bottom: 1rem;
 }
 
@@ -895,6 +916,7 @@ RESULTADOS
     margin-bottom: 10px;
     height: 2rem;
     padding: 5px;
+    border-radius: 0.5rem;
 }
 
 #form-contact input::placeholder{
@@ -910,6 +932,7 @@ RESULTADOS
     height: 4rem;
     margin-bottom: 1.5rem;
     padding: 5px;
+    border-radius: 0.5rem;
 }
 
 #input_mensaje::placeholder{
@@ -1042,7 +1065,7 @@ TABLET
 @media (min-width:768px) {
 
     header {
-        height: 25vh;
+        height: 20vh;
     }
 
 
@@ -1050,27 +1073,30 @@ TABLET
         height: 60%;
 
     }
+    
+    .main-portada-imagen img{
+        
+        min-height: auto;
+        max-height: auto;
+        width: 35%;
 
+    }
     .header-opciones{
         height:auto;
         gap: 1.5rem;
     }
-    .header-opciones a{
-        font-size: 2.5rem;
-        
-        
-    }
+  
 
     #cuestionario-interactivo {
-        scroll-margin-top: 25vh;
+        scroll-margin-top: 20vh;
     }
 
     #resultados {
-        scroll-margin-top: 25vh;
+        scroll-margin-top: 20vh;
     }
 
     #contacto {
-        scroll-margin-top: 25vh;
+        scroll-margin-top: 20vh;
     }
 
 }
@@ -1150,18 +1176,28 @@ MAIN SECTION
         margin-left: 2rem;
         
     }
+    .main-portada-button a{ 
+    
+        height: 100%;
+        width: 100%;
+        margin-left: 0rem;
+        
+    }
     .main-portada-button a button{
         font-size: 1.5rem;
+        width: 70%;
+        height: 80%;
     }
     .main-portada-imagen{
         order: 2;
         height: 60%;
         width: 30%;
     } 
-
+    
     .main-portada-imagen img{
     height: 100%;
-    width: 100%;
+    min-width: 65%;
+    max-width: 80%;
 
     }
 
@@ -1203,12 +1239,14 @@ MAIN SECTION
 
     .main-beneficios-box-text h2 {
     padding: 0;
+    font-size: 1.5rem;
     text-align: center;
     }
     .main-beneficios-box-text p {
     padding-top: 10px;
     font-weight: 500;
     text-align: center;
+    font-size: 1.2rem;
     }   
 
     .main-portada footer{
@@ -1342,7 +1380,8 @@ APLICACION CUESTIONARIO
 
     .card-icon img {
         height: 60%;
-        width: 30%;
+        max-width: 20%;
+        min-width: auto;
     }
 
     .card-text{
@@ -1469,8 +1508,10 @@ RESULTADOS
     width: 75%;
     display: flex;
     justify-content: center;
+    
 }
 .resultados-descargar button{
+    height: 70%;
     width: 100%;
     background-color: var(--color_primary);
 }
